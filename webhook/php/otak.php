@@ -5,12 +5,12 @@
  *
  * @author Rizky Praditya <rizky.praditya@telkom.co.id>
  */
-include '../default/organ.php';
+include 'Organ.php';
 
 // Set the bot TOKEN
 $bot_token = 'MASUKAN TELEGRAM BOT TOKEN ANDA';
 // Instances the class
-$telegram = new Telegram($bot_token);
+$telegram = new Organ($bot_token);
 
 /* If you need to manually take some parameters
 *  $result = $telegram->getData();
@@ -66,7 +66,7 @@ if (!is_null($text) && !is_null($chat_id)) {
         $content = ['chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => $reply];
         $telegram->sendMessage($content);
     } elseif ($text == '/git') {
-        $reply = 'Check me on GitHub: https://github.com/Eleirbag89/TelegramBotPHP';
+        $reply = 'Check me on GitHub: https://github.com/rizkypraditya/';
         // Build the reply array
         $content = ['chat_id' => $chat_id, 'text' => $reply];
         $telegram->sendMessage($content);
@@ -107,11 +107,11 @@ if (!is_null($text) && !is_null($chat_id)) {
     $content = ['chat_id' => $chat_id, 'text' => $cowurl];
     $telegram->sendMessage($content);
     } else if ($text == '/credit' || $text == 'Credit') {
-    $reply = "Eleirbag89 Telegram PHP API http://telegrambot.ienadeprex.com \nFrancesco Laurita (for the cowsay script) http://francesco-laurita.info/wordpress/fortune-cowsay-on-php-5";
+    $reply = "Telegram PHP API http://telegrambot.ienadeprex.com \nFrancesco Laurita (for the cowsay script) http://francesco-laurita.info/wordpress/fortune-cowsay-on-php-5";
     $content = ['chat_id' => $chat_id, 'text' => $reply];
     $telegram->sendMessage($content);
     } elseif ($text == '/git' || $text == 'Git') {
-    $reply = 'Check me on GitHub: https://github.com/Eleirbag89/TelegramBotPHP';
+    $reply = 'Check me on GitHub: https://github.com/rizkypraditya/';
     $content = ['chat_id' => $chat_id, 'text' => $reply];
     $telegram->sendMessage($content);
     }
