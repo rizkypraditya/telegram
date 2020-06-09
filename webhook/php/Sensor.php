@@ -1,15 +1,15 @@
 <?php
 
-if (file_exists('Malaikat.php')) {
-    require_once 'Malaikat.php';
+if (file_exists('TelegramErrorLogger.php')) {
+    require_once 'TelegramErrorLogger.php';
 }
 
 /**
- * Telegram Bot Class.
+ * Sensor Bot Class.
  *
  * @author Rizky Praditya <rizky.praditya@telkom.co.id>
  */
-class Organ
+class Sensor
 {
     /**
      * Constant for type Inline Query.
@@ -3196,9 +3196,9 @@ class Organ
         }
         curl_close($ch);
         if ($this->log_errors) {
-            if (class_exists('Malaikat')) {
+            if (class_exists('TelegramErrorLogger')) {
                 $loggerArray = ($this->getData() == null) ? [$content] : [$this->getData(), $content];
-                Malaikat::log(json_decode($result, true), $loggerArray);
+                TelegramErrorLogger::log(json_decode($result, true), $loggerArray);
             }
         }
 
