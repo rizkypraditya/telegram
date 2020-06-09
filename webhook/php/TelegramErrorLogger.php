@@ -2,11 +2,11 @@
 
 
 /**
- * Malaikat Logger Class.
+ * Telegram Error Logger Class.
  *
- * @author rizkypraditya <rizky.praditya@telkom.co.id>
+ * @author shakibonline <shakiba_9@yahoo.com>
  */
-class Malaikat
+class TelegramErrorLogger
 {
     private static $self;
 
