@@ -9,7 +9,7 @@
 include '../default/Sensor.php';
 
 // Atur TOKEN bot disini
-$bot_token = '1074742441:AAHJJb-JYBlg-10JcmMllDrMA6LO4WtOQ3k';
+$bot_token = 'MASUKAN TOKEN BOT DISINI';
 
 // Aktifkan Sensor Bot
 $sensor = new Sensor($bot_token);
