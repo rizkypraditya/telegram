@@ -69,8 +69,10 @@ if (!is_null($text) && !is_null($chat_id)) {
     // Sensor terakhir ketika ada chat yang belum terdaftar
     else {
         $reply = 'Mohon maaf pesan anda tidak kami kenali';
-        // Kirim balasan konten
-        $content = ['chat_id' => $chat_id, 'text' => $reply];
-        $sensor->sendMessage($content);
+        // Kirim balasan konten apabila chat private
+        if (!$sensor->messageFromGroup()) {
+            $content = ['chat_id' => $chat_id, 'text' => $reply];
+            $sensor->sendMessage($content);
+        }
     } 
 }
